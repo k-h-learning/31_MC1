@@ -320,6 +320,14 @@ header {
   color: #fff;
   font-weight: bolder;
 }
+.header-wrap__nav__list .__res a:hover i {
+  color: #fff;
+}
+.header-wrap__nav__list .__res a i {
+  color: #557897;
+  font-size: 1.5rem;
+  margin-right: 5%;
+}
 .header-wrap .drawer {
   visibility: hidden;
 }
@@ -420,7 +428,7 @@ header {
   line-height: 1.5;
 }
 .intro-wrap__con__txt p {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 .btn {
@@ -496,7 +504,7 @@ header {
   display: flex;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  justify-content: space-between;
+  justify-content: center;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
@@ -505,7 +513,7 @@ header {
   width: 30%;
   height: 620px;
   background-color: #fff;
-  margin-top: 6%;
+  margin: 1.5%;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   position: relative;
@@ -629,7 +637,7 @@ header {
 }
 .news-wrap__right__list__item {
   margin-bottom: 1%;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 .news-wrap__right__list__item span {
   margin-right: 8%;
@@ -660,7 +668,7 @@ header {
 .access-wrap__bottom__left {
   display: block;
   width: 50%;
-  aspect-ratio: 5/3;
+  aspect-ratio: 5/2;
   margin-right: 5%;
 }
 .access-wrap__bottom__left img {
@@ -774,6 +782,9 @@ header {
 .faq-wrap__body__list__item__ttl:hover {
   cursor: pointer;
   opacity: 0.6;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
 }
 .faq-wrap__body__list__item__con {
   display: none;
@@ -847,32 +858,18 @@ header {
   opacity: 0.7;
 }
 .footer-wrap__nav {
-  width: 80%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  width: 90%;
   margin: 0 auto;
 }
 .footer-wrap__nav__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
+  text-align: center;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  margin: auto 4%;
+  flex-wrap: wrap;
 }
 .footer-wrap__nav__list__item {
-  display: inline-block;
-  margin: auto 4%;
+  margin: 3%;
   text-align: center;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
 }
 .footer-wrap__nav__list__item a {
   color: #fff;
@@ -900,13 +897,15 @@ header {
 .footer-wrap__res__btn a:hover {
   border-color: #fff;
 }
-.footer-wrap__res__info p {
+.footer-wrap__res__info a {
   color: #fff;
   font-size: 2.25rem;
   line-height: 1.2;
 }
-.footer-wrap__res__info p span {
+.footer-wrap__res__info p {
   font-size: 1rem;
+  color: #fff;
+  padding-top: 1%;
 }
 .footer-wrap__time {
   background-color: #fff;
@@ -1025,7 +1024,7 @@ header {
     margin: 0 auto;
   }
   .intro-wrap__con__txt p {
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
   .treat-wrap {
     width: 90%;
@@ -1033,6 +1032,7 @@ header {
   .treat-wrap__body__block {
     width: 48%;
     height: 520px;
+    margin: 1%;
   }
   .greet-wrap__body {
     position: relative;
@@ -1077,9 +1077,6 @@ header {
     width: 95%;
     margin: 0 auto 18%;
   }
-  .news-wrap__right__list__item {
-    font-size: 1rem;
-  }
   .access-wrap__map iframe {
     height: 50vh;
   }
@@ -1108,6 +1105,9 @@ header {
   }
 }
 @media screen and (max-width:768px) {
+  .__tab {
+    display: inline-block;
+  }
   .section {
     padding: 8% 0;
   }
@@ -1186,11 +1186,18 @@ header {
     border: 2px solid #fff;
     border-radius: 10px;
   }
+  header .header-wrap__nav__list .__res a i {
+    color: #fff;
+    font-size: 1.5rem;
+  }
   header .header-wrap__nav__list .__res a:hover {
     background-color: #fff;
     border: 2px solid #fff;
     color: #557897;
     opacity: 1;
+  }
+  header .header-wrap__nav__list .__res a:hover i {
+    color: #557897;
   }
   body.nav-open header .drawer {
     border-top: 0;
@@ -1214,15 +1221,6 @@ header {
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-  }
-  .footer-wrap__nav {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
-  .footer-wrap__nav .__1 {
-    margin-bottom: 5%;
   }
   .footer-wrap__time {
     width: 350px;
@@ -1259,9 +1257,6 @@ header {
   }
   .intro-wrap__con {
     width: 90%;
-  }
-  .intro-wrap__con__txt p {
-    font-size: 1rem;
   }
   .treat-wrap__body__block {
     width: 80%;
@@ -1300,10 +1295,13 @@ header {
   .faq-wrap__body__list__item__con p {
     font-size: 1rem;
   }
+  .footer-wrap__nav {
+    width: 80%;
+  }
   .footer-wrap__res__btn a {
     font-size: 1.2rem;
   }
-  .footer-wrap__res__info p {
+  .footer-wrap__res__info a {
     font-size: 1.5rem;
   }
   .footer-wrap__time {

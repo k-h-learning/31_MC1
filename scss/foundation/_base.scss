@@ -148,6 +148,14 @@ header {
           border: 2px solid $Navy;
           color: $White;
           font-weight: bolder;
+          i {
+            color: $White;
+          }
+        }
+        i {
+          color: $Navy;
+          font-size: 1.5rem;
+          margin-right: 5%;
         }
       }
     }
@@ -224,7 +232,7 @@ header {
         width: 100%;
         height: 100%;
         -o-object-fit: cover;
-           object-fit: cover;
+          object-fit: cover;
       }
       &::after {
         position: absolute;
@@ -252,7 +260,7 @@ header {
         margin-bottom: 10%;
         line-height: 1.5;
         p {
-          font-size: 1.5rem;
+          font-size: 1.25rem;
         }
       }
     }
@@ -331,7 +339,7 @@ header {
       display: flex;
       -webkit-box-pack: justify;
           -ms-flex-pack: justify;
-              justify-content: space-between;
+              justify-content: center;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
       &__block {
@@ -339,7 +347,7 @@ header {
         width: 30%;
         height: 620px;
         background-color: $White;
-        margin-top: 6%;
+        margin: 1.5%;
         -webkit-box-sizing: border-box;
                 box-sizing: border-box;
         position: relative;
@@ -350,7 +358,7 @@ header {
             width: 100%;
             height: 100%;
             -o-object-fit: cover;
-               object-fit: cover;
+              object-fit: cover;
           }
         }
         &__ttl {
@@ -434,7 +442,7 @@ header {
         width: 100%;
         height: 100%;
         -o-object-fit: cover;
-           object-fit: cover;
+          object-fit: cover;
       }
     }
   }
@@ -468,7 +476,7 @@ header {
       &__list {
         &__item {
           margin-bottom: 1%;
-          font-size: 1.5rem;
+          font-size: 1rem;
           span {
             margin-right: 8%;
           }
@@ -502,7 +510,7 @@ header {
       &__left {
         display: block;
         width: 50%;
-        aspect-ratio: 5 / 3;
+        aspect-ratio: 5 / 2;
         margin-right: 5%;
         img {
           width: 100%;
@@ -621,6 +629,9 @@ header {
             &:hover {
               cursor: pointer;
               opacity: 0.6;
+              -webkit-transition: all 0.3s;
+              -o-transition: all 0.3s;
+              transition: all 0.3s;
             }
           }
           &__con {
@@ -698,30 +709,16 @@ header {
       }
     }
     &__nav {
-      width: 80%;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center;
+      width: 90%;
       margin: 0 auto;
       &__list {
-        display: -webkit-box;
-        display: -ms-flexbox;
+        text-align: center;
         display: flex;
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
-        -webkit-box-sizing: border-box;
-                box-sizing: border-box;
-        margin: auto 4%;
+        justify-content: center;
+        flex-wrap: wrap;
         &__item {
-          display: inline-block;
-          margin: auto 4%;
+          margin: 3%;
           text-align: center;
-          -webkit-box-sizing: border-box;
-                  box-sizing: border-box;
           a {
             color: $White;
             white-space: nowrap;
@@ -753,13 +750,15 @@ header {
         }
       }
       &__info {
-        p {
+        a {
           color: $White;
           font-size: 2.25rem;
           line-height: 1.2;
-          span {
-            font-size: 1rem;
-          }
+        }
+        p {
+          font-size: 1rem;
+          color: $White;
+          padding-top: 1%;
         }
       }
     }
@@ -892,7 +891,7 @@ header {
       width: 70%;
       margin: 0 auto;
       &__txt p {
-        font-size: 1.25rem;
+        font-size: 1rem;
       }
     }
   }
@@ -903,6 +902,7 @@ header {
       &__block {
         width: 48%;
         height: 520px;
+        margin: 1%;
       }
     }
   }
@@ -951,11 +951,6 @@ header {
     &__right {
       width: 95%;
       margin: 0 auto 18%;
-      &__list {
-        &__item {
-          font-size: 1rem;
-        }
-      }
     }
   }
 
@@ -992,6 +987,10 @@ header {
 }
 
 @include mq(tab) {
+  .__tab {
+    display: inline-block;
+  }
+
   .section {
     padding: 8% 0;
   }
@@ -1066,11 +1065,18 @@ header {
           margin: 0 auto;
           border: 2px solid $White;
           border-radius: 10px;
+          i {
+            color: $White;
+            font-size: 1.5rem;
+          }
           &:hover {
             background-color: $White;
             border: 2px solid $White;
             color: $Navy;
             opacity: 1;
+            i {
+              color: $Navy;
+            }
           }
         }
       }
@@ -1107,15 +1113,6 @@ header {
   }
 
   .footer-wrap {
-    &__nav {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
-      .__1 {
-        margin-bottom: 5%;
-      }
-    }
     &__time {
       width: 350px;
     }
@@ -1167,11 +1164,6 @@ header {
     }
     &__con {
       width: 90%;
-      &__txt {
-        p {
-          font-size: 1rem;
-        }
-      }
     }
   }
 
@@ -1239,13 +1231,16 @@ header {
   }
 
   .footer-wrap {
+    &__nav {
+      width: 80%;
+    }
     &__res {
       &__btn {
         a {
           font-size: 1.2rem;
         }
       }
-      &__info p {
+      &__info a {
         font-size: 1.5rem;
       }
     }
