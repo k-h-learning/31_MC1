@@ -830,7 +830,8 @@ header {
     text-align: center;
     letter-spacing: 0.3rem;
     color: $Navy;
-    border-bottom: 1px solid $Navy
+    border-bottom: 1px solid $Navy;
+    white-space: nowrap;
   }
 }
 
@@ -1140,6 +1141,12 @@ header {
     font-size: 1.2rem;
   }
 
+  #load_logo_ttl {
+    p {
+      font-size: 1.5rem;
+    }
+  }
+
   header {
     height: 70px;
     .header-wrap {
@@ -1152,6 +1159,9 @@ header {
 
   .top-wrap {
     &__con {
+      &__ttl {
+        margin-bottom: 5%;
+      }
       &__txt {
         font-size: 1.2rem;
       }
@@ -1164,14 +1174,17 @@ header {
     }
     &__con {
       width: 90%;
+      &__txt {
+        line-height: 1.8;
+      }
     }
   }
 
   .treat-wrap {
     &__body {
       &__block {
-        width: 80%;
-        height: 480px;
+        width: 90%;
+        height: 460px;
         margin: 5% auto;
         .arrow-right {
           padding-right: 3rem;
@@ -1184,6 +1197,9 @@ header {
     &__body {
       &__left, &__right {
         width: 90%;
+      }
+      &__left__txt {
+        line-height: 2;
       }
     }
   }

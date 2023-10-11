@@ -969,6 +969,7 @@ header {
   letter-spacing: 0.3rem;
   color: #557897;
   border-bottom: 1px solid #557897;
+  white-space: nowrap;
 }
 
 .fadeIn {
@@ -1242,12 +1243,18 @@ header {
   .btn {
     font-size: 1.2rem;
   }
+  #load_logo_ttl p {
+    font-size: 1.5rem;
+  }
   header {
     height: 70px;
   }
   header .header-wrap__nav__list .__res a {
     width: 50%;
     line-height: 2rem;
+  }
+  .top-wrap__con__ttl {
+    margin-bottom: 5%;
   }
   .top-wrap__con__txt {
     font-size: 1.2rem;
@@ -1258,9 +1265,12 @@ header {
   .intro-wrap__con {
     width: 90%;
   }
+  .intro-wrap__con__txt {
+    line-height: 1.8;
+  }
   .treat-wrap__body__block {
-    width: 80%;
-    height: 480px;
+    width: 90%;
+    height: 460px;
     margin: 5% auto;
   }
   .treat-wrap__body__block .arrow-right {
@@ -1268,6 +1278,9 @@ header {
   }
   .greet-wrap__body__left, .greet-wrap__body__right {
     width: 90%;
+  }
+  .greet-wrap__body__left__txt {
+    line-height: 2;
   }
   .news-wrap__right {
     width: 100%;
